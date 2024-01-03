@@ -1,4 +1,4 @@
-##100 Days of Python Pledge
+## 100 Days of Python Pledge
 ```
 I Krishna Bagade am committed to completing the 100 days of Python challenge.
 
