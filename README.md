@@ -1,6 +1,6 @@
 ##100 Days of Python Pledge
 ```
-I #Krishna Bagade am committed to completing the 100 days of Python challenge.
+I **Krishna Bagade** am committed to completing the 100 days of Python challenge.
 
 I hereby pledge to work for at least an hour on Python programming for 100 days.
 
