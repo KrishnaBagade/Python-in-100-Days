@@ -107,7 +107,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
                                         \'''''')   
         print("A werewolf was in the cabin. You got eaten. Game Over")
         break
-      elif choice="no":
+      elif choice=="no":
         print("You see a castle ahead walk towards it?")
     elif choice=="no":
       print('''       ( )___( )
@@ -186,7 +186,7 @@ ____I/______\I____\/..___.../|' v . | .|||||/____|____\|||| /|. . | . .|\.\/_
  ~|~~~~~|~
  +|-===-|;-.
   |  |  |  `-
- _|--|--|_     Lester - AMC
+ _|--|--|_     
 |--.....--|
 |--.....--|
 |--.....--| .''.
