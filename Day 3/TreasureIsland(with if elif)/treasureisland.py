@@ -29,7 +29,7 @@ print("Your mission is to find the treasure.")
 while True:
   print("You are the first explorers to arrive at the island.You are at the starting point.")
   print("Enter choices with yes or no.")
-  choice=input("There is a river in front of you do you want to swim?")
+  choice=input("There is a river in front of you do you want to swim?").lower()
   if choice=="yes":
     print('''
                                            ___.-----.______
@@ -69,7 +69,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
       ''')
     print("A battleship has arrived to take you across the river.")
-    choice=input("You see a cabin in the distance. Do you go to the cabin?")
+    choice=input("You see a cabin in the distance. Do you go to the cabin?").lower()
     if choice=="yes":
       print('''                         (   )
                           (    )
@@ -91,7 +91,7 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
                I II__I  I     XXXXXXX     I
             ~~~~~"   "~~~~~~~~~~~~~~~~~~~~~~~~''')
       print("You have arrived at the cabin.")
-      choice=input("Enter the cabin?")
+      choice=input("Enter the cabin?").lower()
       if choice=="yes":
         print('''                           /\
                                 ( ;`~v/~~~ ;._
@@ -150,10 +150,10 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
    \I        I/              |     ~.~_||||| |~~~|~~~| ||||.|| | ~   | |
 ____I/______\I____\/..___.../|' v . | .|||||/____|____\|||| /|. . | . .|\.\/_
 ''')
-      choice=input("you have arrived at the castle. Do you enter?")
+      choice=input("you have arrived at the castle. Do you enter?").lower()
       if choice=="yes":
         print("You have found one of the treasure chests. You win!")
-        choice=input("Do you wish to end your adventure?")
+        choice=input("Do you wish to end your adventure?").lower()
         if choice=="yes":
           print('''                                             __----~~~~~~~~~~~------___
                                    .  .   ~~//====......          __--~ ~~
@@ -175,7 +175,7 @@ ____I/______\I____\/..___.../|' v . | .|||||/____|____\|||| /|. . | . .|\.\/_
                    \\        |                |//.-~~-\
                     \X__x___ ==================*
                      ~---,____--~~*''')
-          print("You have got a treasure chest and leave a dragon comes and destroys the castle.")
+          print("You have got a treasure chest and leave, a dragon comes and destroys the castle.")
         elif choice=="no":
           continue
       elif choice=="no":
@@ -193,7 +193,7 @@ ____I/______\I____\/..___.../|' v . | .|||||/____|____\|||| /|. . | . .|\.\/_
 |--.....--| |~~|
  ~~-----~~   ~~
 ''')
-        choice=input("You see a well in front of you after walking away from the castle. enter the well?")
+        choice=input("You see a well in front of you after walking away from the castle. Enter the well?").lower()
         if choice=="yes":
           print(''',,
 `""*$b..
@@ -234,15 +234,15 @@ ____I/______\I____\/..___.../|' v . | .|||||/____|____\|||| /|. . | . .|\.\/_
 #   |========#   | lbm
 ''')
           print("You see a drawbridge in the distance. You walk towards it.")
-          choice=input("do you cross the drawbridge?")
+          choice=input("do you cross the drawbridge?").lower()
           if choice=="yes":
             print("You found one of the treasure chests. You win!")
-            choice=input("do you wish to end your adventure?")
+            choice=input("do you wish to end your adventure?").lower()
             if choice=="yes":
               break
             elif choice=="no":
               print("Please wait for next update to continue the journey")
               break
           if choice=="no":
-            print("Your character got tired of walking your adventure is ending. To be continued...(till the next installment)"))")
+            print("Your character got tired of walking your adventure is ending. To be continued...(till the next installment)")
             break
