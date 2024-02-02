@@ -72,27 +72,30 @@ while True:
       computer_card_value_show=(computer_drawn_card[0],"?")
       print(computer_card_value_show)
       computer_card_value=(int(computer_drawn_card[0])+int(computer_drawn_card[1]))
-      user_chose=input("Type 'hit' to draw another card or type 'stand' to pass: ")
-      if user_chose == "hit":
-        user_drawn_card.append(draw_card())
-        check_for_ace(user_drawn_card,len(user_drawn_card)-1)
-        user_card_value+=int(user_drawn_card[2])
-        if user_card_value == 21:
-          print(f"You drew a {user_drawn_card[2]} of {card_category[random.randint(0,3)]}, You win")
-          bet+=bet_amount_i
-        elif user_card_value>21:
-          print(f"You drew a {user_drawn_card[2]} of {card_category[random.randint(0,3)]}, You lose.")
-          bet-=bet_amount_i
-        if computer_card_value<17:
-         computer_drawn_card.append(draw_card())
-        print(f"The dealer drew a {computer_drawn_card}")
-      elif user_chose == "stand":
-        print("You chose not to draw a card.")
-        if computer_card_value<17:
-         computer_drawn_card.append(draw_card())
-        print(f"The dealer drew a {computer_drawn_card}")
-      else:
-        print("You entered a value other than hit or stand starting hand reset.")
+      while True:
+        user_chose=input("Type 'hit' to draw another card or type 'stand' to pass: ")
+        if user_chose == "hit":
+          user_drawn_card.append(draw_card())
+          check_for_ace(user_drawn_card,len(user_drawn_card)-1)
+          user_card_value+=int(user_drawn_card[2])
+          if user_card_value == 21:
+            print(f"You drew a {user_drawn_card[2]} of {card_category[random.randint(0,3)]}, You win")
+            bet+=bet_amount_i
+          elif user_card_value>21:
+            print(f"You drew a {user_drawn_card[2]} of {card_category[random.randint(0,3)]}, You went over 21. You lose.")
+            bet-=bet_amount_i
+            break
+          if computer_card_value<17:
+           computer_drawn_card.append(draw_card())
+          print(f"The dealer drew a {computer_drawn_card}")
+        elif user_chose == "stand":
+          print("You chose not to draw a card.")
+          if computer_card_value<17:
+           computer_drawn_card.append(draw_card())
+          print(f"The dealer drew a {computer_drawn_card}")
+          break
+        else:
+          print("You entered a value other than hit or stand starting hand reset.")
         continue
       if len(computer_drawn_card)>2:
        computer_card_value+=int(computer_drawn_card[2])
