@@ -81,17 +81,20 @@ while True:
           if user_card_value == 21:
             print(f"You drew a {user_drawn_card[2]} of {card_category[random.randint(0,3)]}, You win")
             bet+=bet_amount_i
+            break
           elif user_card_value>21:
             print(f"You drew a {user_drawn_card[2]} of {card_category[random.randint(0,3)]}, You went over 21. You lose.")
             bet-=bet_amount_i
             break
           if computer_card_value<17:
            computer_drawn_card.append(draw_card())
+           computer_card_value+=computer_drawn_card[len(computer_drawn_card)-1]
           print(f"The dealer drew a {computer_drawn_card}")
         elif user_chose == "stand":
           print("You chose not to draw a card.")
           if computer_card_value<17:
            computer_drawn_card.append(draw_card())
+           computer_card_value+=computer_drawn_card[len(computer_drawn_card)-1]
           print(f"The dealer drew a {computer_drawn_card}")
           break
         else:
