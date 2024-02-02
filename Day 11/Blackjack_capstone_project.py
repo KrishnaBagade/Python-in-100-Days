@@ -9,6 +9,9 @@
 ## The computer is the dealer.
 import random
 
+from art import logo
+
+from replit import clear
 
 def draw_card():
   card_drawn=cards[random.randint(0,12)]
@@ -38,6 +41,8 @@ def check_for_winner(card_value,count=0):
 bet=1000
 
 while True:
+  clear()
+  print(logo)
   if bet==0:
     print("You added $100 to your stakes.")
     bet+=100
