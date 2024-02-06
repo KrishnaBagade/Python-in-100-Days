@@ -12,15 +12,16 @@ def compare(user_choice,data,a,b,score):
     clear()
     score+=1
     print(f"You guessed it right. Current score: {score}")
-    a=randint(0,49)
+    a=b
     b=randint(0,49)
     while a==b:
-     a=randint(0,49)
      b=randint(0,49)
     game(score,a,b)
   else:
     clear()
     print(f"Sorry, that's wrong. Final score: {score}")
+    should_continue=False
+    return should_continue
 
 def game(score,a,b):
   print(logo)
@@ -34,7 +35,9 @@ def game(score,a,b):
     elif user_choice == 'e':
       break
     else:
-      compare(user_choice,data,a,b,score)
+      should=compare(user_choice,data,a,b,score)
+      if should == False:
+        break
   
 score=0
 a=0
