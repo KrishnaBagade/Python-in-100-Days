@@ -29,6 +29,7 @@ resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
+    "money": 0,
 }
 
 
@@ -56,6 +57,7 @@ def take_money(drink_chosen, customer_paid):
         return make_drink
 
 
+refund = 0
 while True:
     drink_chosen = input("What drink would you like(espresso/latte/cappuccino): ").lower()
     if drink_chosen == "off":
@@ -83,10 +85,10 @@ while True:
         if MENU[drink_chosen]["cost"] < customer_paid:
             refund = (customer_paid - MENU[drink_chosen]["cost"])
         if should_make == True:
-            water_remaining = resources["water"] - MENU[drink_chosen]["ingredients"]["water"]
-            milk_remaining = resources["milk"] - MENU[drink_chosen]["ingredients"]["milk"]
-            coffee_remaining = resources["coffee"] - MENU[drink_chosen]["ingredients"]["coffee"]
-            resources["water"] = water_remaining
-            resources["milk"] = milk_remaining
-            resources["coffee"] = coffee_remaining
+            resources["water"] -= MENU[drink_chosen]["ingredients"]["water"]
+            resources["milk"] -= MENU[drink_chosen]["ingredients"]["milk"]
+            resources["coffee"] -= MENU[drink_chosen]["ingredients"]["coffee"]
+            resources["money"] += MENU[drink_chosen]["cost"]
             print(f"Here is your {drink_chosen} enjoy!")
+            if refund > 0:
+                print(f"Here's your ${refund} which was extra.")
