@@ -8,6 +8,8 @@ authors = ["Your Name <you@example.com>"]
 python = ">=3.10.0,<3.11"
 replit = "3.5.0"
 prettytable = "3.9.0"
+tk = "0.1.0"
+colorgram-py = "1.2.0"
 
 [tool.pyright]
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
