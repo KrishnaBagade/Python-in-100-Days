@@ -18,13 +18,13 @@ def game(num_to_guess, try_number):
     print(f"You lose. the number was {num_to_guess}")
   else:
     user_guess = int(input("Make a guess: "))
-    try_number = check_guess(num_to_guess, user_guess, try_number)
+    try_numbers = check_guess(num_to_guess, user_guess, try_number)
     if num_to_guess != user_guess:
-      print(f"Number of remaining guesses {try_number}.")
+      print(f"Number of remaining guesses {try_numbers}.")
     if num_to_guess == user_guess:
       print("Game is over. Would you like to go again?")
     else:
-      game(num_to_guess, try_number)
+      game(num_to_guess, try_numbers)
 
 
 try_number = 0

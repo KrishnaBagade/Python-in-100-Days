@@ -1,10 +1,8 @@
-import turtle
 import colorgram
-import random
 
-def making_colour_list(colour_used,colors_to_extract):
+def making_colour_list(colour_used, colors_to_extract):
   color_to_use = []
-  for color in range (colors_to_extract):
+  for color in range(colors_to_extract):
     color_set = colour_used[color]
     color_captured = color_set.rgb
     color_to_add = (color_captured[0],color_captured[1],color_captured[2])
