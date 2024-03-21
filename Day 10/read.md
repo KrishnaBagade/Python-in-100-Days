@@ -1,5 +1,8 @@
 Calculator Program
-This Python program is a simple calculator that allows the user to perform basic arithmetic operations on two numbers. The program includes addition, subtraction, multiplication, division, remainder, floor division, and exponentiation.
+This Python program is a simple calculator that allows the user 
+to perform basic arithmetic operations on two numbers. The program 
+includes addition, subtraction, multiplication, division, remainder,
+floor division, and exponentiation.
 
 How to Use
 Run the program.
@@ -7,11 +10,13 @@ Enter the first number when prompted.
 Choose an operation from the available options: +, -, *, /, %, //, **.
 Enter the second number.
 The program will display the result of the chosen operation.
-You can choose to continue using the result for further calculations, enter new numbers, or exit the program.
+You can choose to continue using the result for further calculations,
+enter new numbers, or exit the program.
 Code Structure
 logo: The calculator's ASCII art logo is imported from the art module.
 
-clear: The clear function from the replit module is used to clear the console screen.
+clear: The clear function from the replit module is used to clear the 
+console screen.
 
 Basic Arithmetic Functions:
 
@@ -29,9 +34,11 @@ calculator Function:
 
 Takes user input for the first number.
 Validates the input to ensure it is a digit.
-Continues to prompt the user for the next number and the operation until the user decides to exit.
+Continues to prompt the user for the next number and the operation
+until the user decides to exit.
 Clears the console screen after each iteration.
-Handles user choices to continue with the result, enter new numbers, or exit.
+Handles user choices to continue with the result, enter new numbers,
+or exit.
 How to Run
 To run the program, make sure you have the art module installed:
 
@@ -44,8 +51,11 @@ bash
 Copy code
 python filename.py
 Notes
-The program uses float for numerical operations to handle both integer and decimal inputs.
+The program uses float for numerical operations to handle both integer 
+and decimal inputs.
 
-Users can choose to continue calculations, enter new numbers, or exit the program at each step.
+Users can choose to continue calculations, enter new numbers, or exit 
+the program at each step.
 
-The program provides a clear and user-friendly interface for performing basic arithmetic operations.
+The program provides a clear and user-friendly interface for performing 
+basic arithmetic operations.

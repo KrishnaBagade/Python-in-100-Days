@@ -9,9 +9,8 @@ for question in question_data:
   new_question = Question(q1,q2)
   question_bank.append(new_question)
 
-quiz =  QuizBrain(question_bank)
+quiz = QuizBrain(question_bank)
 questions_remain = True
-
 while questions_remain:
   quiz.next_question()
   val = quiz.still_has_questions()

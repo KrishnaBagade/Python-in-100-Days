@@ -1,10 +1,15 @@
 # Hirst Painting with Turtle
 
-This Python script utilizes the Turtle graphics library to create a visually appealing grid of dots with random colors. Each dot is placed on the canvas, forming a 10x10 grid. The colors are randomly selected from a predefined list of colors provided in the `Color_Used` module.
+This Python script utilizes the Turtle graphics library to create a 
+visually appealing grid of dots with random colors. Each dot is placed
+on the canvas, forming a 10x10 grid. The colors are randomly selected 
+from a predefined list of colors provided in the `Color_Used` module.
 
 ## Prerequisites
 
-Make sure you have Python installed on your system. The code uses the Turtle graphics library, which is typically included with Python installations.
+Make sure you have Python installed on your system. The code uses 
+the Turtle graphics library, which is typically included with Python 
+installations.
 
 ## Getting Started
 
@@ -30,7 +35,9 @@ Make sure you have Python installed on your system. The code uses the Turtle gra
 
 ## Customization
 
-If you want to modify the colors or any other parameters, you can do so in the `Color_Used` module or directly in the main script (`dot_grid.py`). Feel free to experiment with the code to create different patterns or effects.
+If you want to modify the colors or any other parameters, you can do 
+so in the `Color_Used` module or directly in the main script (`dot_grid.py`).
+Feel free to experiment with the code to create different patterns or effects.
 
 ```python
 # Example modification of Color_Used module
@@ -46,7 +53,9 @@ v = [
 ```
 ## Acknowledgments
 
-- Credits to the Turtle graphics library for providing a simple way to create graphics in Python.
+- Credits to the Turtle graphics library for providing a simple way 
+to create graphics in Python.
 - Inspired by creativity and exploration in programming.
 
-Feel free to expand the README with additional information or customization options based on your preferences.
+Feel free to expand the README with additional information or 
+customization options based on your preferences.

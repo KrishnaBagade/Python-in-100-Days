@@ -10,7 +10,8 @@ Format the result to 2 decimal places = 33.60
 
 Thus everyone's share of the total bill is $30.00 plus a $3.60 tip.
 
-Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+Tip: There are 2 ways to round a number. You might have to do some 
+Googling to solve this.💪
 
 
 # Example Input
