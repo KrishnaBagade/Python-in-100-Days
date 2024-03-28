@@ -3,7 +3,7 @@ from time import sleep
 from snake import Snake
 from Food import Food
 from Score_Board import ScoreBoard
-snake_body=[]
+snake_body = []
 screen = Screen()
 screen.setup(width=600,height=600)
 screen.title("Snake Game")
