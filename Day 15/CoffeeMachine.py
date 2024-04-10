@@ -51,9 +51,19 @@ def take_money(drink_chosen, customer_paid):
         print(f"Refunding your ${customer_paid} .")
     elif drink_cost == customer_paid:
         make_drink = True
+        with open("profit.txt",mode="r") as file:
+            profit = file.read()
+        profit += drink_cost
+        with open("profit.txt",mode="w") as file:
+            file.write(f"{profit}")
         return make_drink
     elif drink_cost < customer_paid:
         make_drink = True
+        with open("profit.txt",mode="r") as file:
+            profit = file.read()
+        profit += drink_cost
+        with open("profit.txt",mode="w") as file:
+            file.write(f"{profit}")
         return make_drink
 
 

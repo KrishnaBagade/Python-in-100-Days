@@ -35,11 +35,16 @@ def check_for_winner(card_value,count=0):
     count = check_for_winner(card_value, count+1)
   return count
 
-bet = 1000
+with open("funds.txt",mode="r") as file:
+  funds_remaining = file.read()
+bet = int(funds_remaining)
+while bet <= 0:
+  print("You added $100 to your stakes.")
+  bet += 100
 
 while True:
   print(logo)
-  if bet == 0:
+  if bet <= 0:
     print("You added $100 to your stakes.")
     bet += 100
   print(f"Amount you can bet on ${bet}")
@@ -129,5 +134,7 @@ while True:
          break
   else:
     print("Please enter a proper number to bet on")
-print(f"Your winnings were ${bet-1000}")
+print(f"Your winnings were ${bet-100}")
+with open("funds.txt",mode="w") as file:
+  file.write(f"{bet}")
 #hit to drawn card stand to not draw card

@@ -15,6 +15,8 @@ def caesar(word, shift, direction):
       else:
         end_word += char
     print(f'The encoded text is {end_word}')
+    with open("Codes_created.txt",mode="a") as file:
+      file.write(f"\n{end_word}")
   elif direction == "decode":
     if shift > 25:
       shift %= 25
@@ -28,6 +30,8 @@ def caesar(word, shift, direction):
       else:
         end_word += char
     print(f'The decoded text is {end_word}')
+    with open("Codes_created.txt",mode="a") as file:
+      file.write(f"\n{end_word}")
   else:
     print("Please specify if you wish to encode or decode your message.")
 

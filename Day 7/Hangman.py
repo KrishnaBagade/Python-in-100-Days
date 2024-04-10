@@ -5,6 +5,8 @@ from Hangman_ascii_art import logo,stages
 def letter_in_word(alphabet, word):
   return alphabet in word
 
+with open("wins.txt",mode="r") as file:
+  wins = file.read()
 lives = 6
 print(logo)
 v = random.randint(0, len(word_list))
@@ -42,4 +44,7 @@ while "_" in display:
   if "_" not in display:
     print(f'{"".join(display)}')
     print("You win!")
+    wins += 1
+    with open("wins.txt",mode="w") as file_:
+      file_.write(f"{wins}")
     break

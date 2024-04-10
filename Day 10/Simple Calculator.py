@@ -45,6 +45,8 @@ def calculator():
         operation_chosen = input("Pick an operation from the above line: ")
         answer = operations[operation_chosen](num1f,num2f)
         print(f"{num1f} {operation_chosen} {num2f} = {answer}")
+        with open("cal_history.txt",mode="a") as file:
+          file.write(f"\n{num1f} {operation_chosen} {num2f} = {answer}")
         user_choice = input(f"Type 'y' to continue calculating with {answer}, or Type 'z' to enter new numbers."
                             " or 'n to exit the program.': ").lower()
         if user_choice == "n":

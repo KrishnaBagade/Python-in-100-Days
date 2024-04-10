@@ -27,10 +27,16 @@ scissors = '''
 
 #Write your code below this line 👇
 import random
-computer_options=["Rock","Paper","Scissors"]
-win_count=0
-loss_count=0
-draw_count=0
+with open("Wins.txt",mode="r") as file:
+  win_rate = file.read()
+with open("Loss.txt",mode="r") as file_:
+  loss_rate = file_.read()
+with open("Draw.txt",mode="r") as file_a:
+  draw_rate = file_a.read()
+computer_options = ["Rock","Paper","Scissors"]
+win_count = int(win_rate)
+loss_count = int(loss_rate)
+draw_count = int(draw_rate)
 result_w=["0Scissors","2Paper","1Rock"]
 result_l=["0Paper","1Scissors","2Rock"]
 result_d=["0Rock","1Paper","2Scissors"]
@@ -40,54 +46,60 @@ while True:
   computer_chose = computer_options[computer_choice]
   result=user_choice+computer_chose
   user_chose=computer_options[int(user_choice)]
-  if user_chose=="Rock":
+  if user_chose == "Rock":
     print(rock
          )
-  elif user_chose=="Paper":
+  elif user_chose == "Paper":
     print(paper)
-  elif user_chose=="Scissors":
+  elif user_chose == "Scissors":
     print(scissors)
-  if computer_chose=="Rock":
+  if computer_chose == "Rock":
       print(rock)
-  elif computer_chose=="Paper":
+  elif computer_chose == "Paper":
       print(paper)
-  elif computer_chose=="Scissors":
+  elif computer_chose == "Scissors":
       print(scissors)
   if result in result_w:
     print(f"You choose {user_chose} and Computer chose {computer_chose}. Congrats, you win!")
-    win_count+=1
+    win_count += 1
   elif result in result_l:
     print(f"You choose {user_chose} and Computer chose {computer_chose}. Sorry, you lose!")
-    loss_count+=1
+    loss_count += 1
   elif result in result_d:
     print(f"You choose {user_chose} and Computer chose {computer_chose}. It's a draw!")
-    draw_count+=1
-  option_p=input("Do you want to play again? Type 'y' for yes or 'n' for no.\n")
-  if option_p=="n":
+    draw_count += 1
+  option_p = input("Do you want to play again? Type 'y' for yes or 'n' for no.\n")
+  if option_p == "n":
+    with open("Wins.txt",mode="w") as file_b:
+      file_b.write(f"{win_count}")
+    with open("Loss.txt", mode="w") as file_c:
+      file_b.write(f"{loss_count}")
+    with open("Draw.txt", mode="w") as file_d:
+      file_b.write(f"{draw_count}")
     break
-  elif option_p=="y":
+  elif option_p == "y":
     continue
-play_count=win_count+loss_count+draw_count
+play_count = win_count+loss_count+draw_count
 print(f"Thank you for playing Rock-Paper-Scissors.\nYou played {play_count} games.\nYou won {win_count} games, lost {loss_count} games and had {draw_count} draws.")
-if win_count>loss_count and win_count>draw_count:
+if win_count > loss_count and win_count > draw_count:
   print("You are having an awesome day!")
-elif win_count>loss_count:
+elif win_count > loss_count:
   print("You are having an awesome day!")
-elif win_count>draw_count:
+elif win_count > draw_count:
   print("You are having an awesome day!")
-elif loss_count>win_count and loss_count>draw_count:
+elif loss_count > win_count and loss_count > draw_count:
   print("You are having a bad day")
-elif loss_count>draw_count:
+elif loss_count > draw_count:
   print("You are having a bad day")
-elif loss_count>win_count:
+elif loss_count > win_count:
   print("You are having a bad day")
-elif draw_count>win_count and draw_count>loss_count:
+elif draw_count > win_count and draw_count > loss_count:
   print("You are having an alright day")
-elif draw_count>win_count:
+elif draw_count > win_count:
   print("You are having an alright day")
-elif draw_count>loss_count:
+elif draw_count > loss_count:
   print("You are having an alright day")
-elif win_count==loss_count and win_count==draw_count:
+elif win_count == loss_count and win_count == draw_count:
   print("You are having an average day")
   
   

@@ -58,3 +58,11 @@ class Snake:
         block.penup()
         block.goto(position)
         self.segment.append(block)
+
+    def default(self):
+        for seg in range(len(self.segment)):
+            self.segment[seg].goto(x=700,y=700)
+        self.segment.clear()
+        self.create_snake()
+        self.head = self.segment[0]
+        self.move()

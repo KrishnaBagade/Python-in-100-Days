@@ -25,6 +25,10 @@ while game_is_on:
     for car_check in car_spawner.cars:
         if player_.distance(car_check) < 25:
             scoreboard_.game_over()
+            if scoreboard_.highscore < scoreboard_.level:
+                scoreboard_.highscore = scoreboard_.level
+                with open("highscore.txt",mode="w") as file:
+                    file.write(f"{scoreboard_.highscore}")
             game_is_on = False
     screen.update()
     screen.listen()

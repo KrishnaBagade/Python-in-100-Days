@@ -5,7 +5,12 @@ screen = Screen()
 screen.setup(width=500, height=400)
 start_race = False
 
-user_chose = screen.textinput(title="Make your bet ",prompt="Which turtle do you choose to bet on ?")
+with open("bid_value.txt",mode="r") as file:
+    bet_amount = file.read()
+bid_amount = int(bet_amount)
+if bid_amount <= 0:
+    bid_amount += 100
+user_chose = screen.textinput(title=f"Make your bet from ${bid_amount} ",prompt="Which turtle do you choose to bet on ?")
 red_turtle = Turtle(shape="turtle")
 red_turtle.color("red")
 red_turtle.penup()
@@ -41,7 +46,11 @@ while start_race:
             winner = turtle.pencolor()
             if winner == user_chose:
                 print(f"You win! The winning turtle is {winner}.")
+                bid_amount += bid_amount
             else:
                 print(f"You lose! The winning turtle is {winner}.")
+                bid_amount -= bid_amount
         turtle.forward(turtle_speed[randint(0,3)])
+with open("bid_value.txt",mode="w") as file_:
+    file_.write(f"{bid_amount}")
 screen.exitonclick()

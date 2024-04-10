@@ -12,7 +12,6 @@ def check_guess(num_to_guess,user_guess,try_number):
     print(f"You guessed it right. The number is {num_to_guess}.")
     return
 
-
 def game(num_to_guess, try_number):
   if try_number == 0:
     print(f"You lose. the number was {num_to_guess}")
@@ -22,6 +21,12 @@ def game(num_to_guess, try_number):
     if num_to_guess != user_guess:
       print(f"Number of remaining guesses {try_numbers}.")
     if num_to_guess == user_guess:
+      with open("wins.txt", mode="r") as file:
+        win_rate = file.read()
+      win_count = int(win_rate)
+      win_count += 1
+      with open("wins.txt",mode="w") as file_:
+        file_.write(f"{win_count}")
       print("Game is over. Would you like to go again?")
     else:
       game(num_to_guess, try_numbers)

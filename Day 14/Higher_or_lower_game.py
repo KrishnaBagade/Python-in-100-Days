@@ -35,7 +35,10 @@ def game(score, a, b):
       should = compare(user_choice,data,a,b,score)
       if should == False:
         break
-  
+
+with open("high_score.txt",mode="r") as file:
+  highest_score = file.read()
+highscore = int(highest_score)
 score = 0
 a = 0
 b = 0
@@ -43,3 +46,6 @@ while a == b:
   a = randint(0,49)
   b = randint(0,49)
 game(score,a,b)
+if highscore < score:
+  with open("high_score.txt", mode="w") as file:
+    file.write(f"{score}")

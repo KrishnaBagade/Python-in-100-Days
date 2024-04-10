@@ -21,6 +21,8 @@ for bidder in bidder_dic:
     bid_name = bidder
   else:
     continue
-print(f"The highest bidder is {bid_name} who bid for ${bid_value}")   
+print(f"The highest bidder is {bid_name} who bid for ${bid_value}.")
+with open("bids.txt",mode="a") as file:
+  file.write(f"\nThe highest bidder is {bid_name} who bid for ${bid_value}.")
 
   
