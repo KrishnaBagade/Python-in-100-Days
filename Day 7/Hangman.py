@@ -9,13 +9,18 @@ with open("wins.txt",mode="r") as file:
   wins = file.read()
 lives = 6
 print(logo)
+
 v = random.randint(0, len(word_list))
 chosen_word = word_list[v]
 length_word = len(chosen_word)
 display = []
 user_guessed_letters = []
+
+
 for letter in chosen_word:
   display.append("_")
+
+
 while "_" in display:
   if len(user_guessed_letters) > 1:
     print(f'You have already used these letters {" ".join(user_guessed_letters)}')

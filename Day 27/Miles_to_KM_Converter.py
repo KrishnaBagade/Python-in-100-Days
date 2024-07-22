@@ -1,0 +1,22 @@
+import tkinter
+
+def Miles_to_Km():
+    mile_float = float(user_input.get())
+    ans = round(mile_float*1.609344)
+    value_Km.config(text=f"{ans}")
+window = tkinter.Tk()
+window.title("Mile to Km Converter")
+window.minsize(width=50,height=50)
+miles = tkinter.Label(text="Miles")
+miles.grid(column=2,row=0)
+user_input = tkinter.Entry(width=10)
+user_input.grid(column=1,row=0)
+meaning = tkinter.Label(text="is equal to")
+meaning.grid(column=0,row=1)
+value_Km = tkinter.Label(text="0")
+value_Km.grid(column=1,row=1)
+Km = tkinter.Label(text="Km")
+Km.grid(column=2,row=1)
+cal = tkinter.Button(text="Calculate",command=Miles_to_Km)
+cal.grid(column=1,row=2)
+window.mainloop()

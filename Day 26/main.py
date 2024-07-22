@@ -33,9 +33,10 @@ spec_list = [" ","!","#","$","%","&","(",")","*","+","-",".","/",":",";","<","="
              "}","|","quotes","tilde"]
 user_word__words = list(input("Enter your word or words to get the phonetic for,(press S to check for characters that will"
                          " not be processed including numbers): "))
-print(user_word__words)
+# print(user_word__words)
 dict_letter = dict.keys()
-user_phonetic_word = {letter:dict[f"{letter.upper()}"] for letter in user_word__words if letter.upper() in dict_letter}
-print(user_phonetic_word)
-
+# user_phonetic_word = {letter:dict[f"{letter.upper()}"] for letter in user_word__words if letter.upper() in dict_letter}
+# print(user_phonetic_word)
+user_p_w = [dict[f"{letter.upper()}"] for letter in user_word__words]
+print(user_p_w)
 
